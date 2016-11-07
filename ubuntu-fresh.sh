@@ -35,28 +35,15 @@ clear
 echo "-------------------------------"
 echo "Installing upgrades"
 echo "-------------------------------"
-sudo -k apt upgrade -y
-sleep 1
-sudo apt dist-upgrade -y
+sudo -k apt full-upgrade -y
 sleep 1
 clear
 
 echo "-------------------------------"
 echo "Installing Chromuim"
 echo "-------------------------------"
-sudo apt install chromium-browser -y
-sleep 1
-
-echo "-------------------------------"
-echo "Installing gdebi"
-echo "-------------------------------"
-sudo apt install gdebi -y
-sleep 1
-
-echo "-------------------------------"
-echo "Installing prerequistries"
-echo "-------------------------------"
-sudo apt install lib32z1 lib32ncurses5 lib32stdc++6 network-manager network-manager-gnome network-manager-openvpn network-manager-openvpn-gnome -y
+sudo apt install chromium-browser gdebi lib32z1 lib32ncurses5 lib32stdc++6 network-manager network-manager-gnome network-manager-openvpn network-manager-openvpn-gnome -y
+sudo apt install redshift gtk-redshift htop powertop zsh curl guake virtualbox gstreamer-1.0-plugins-ugly gimp banshee openjdk-8-jre openjdk-8-jdk -y
 sleep 1
 
 echo "-------------------------------"
@@ -107,8 +94,6 @@ cd ~/Downloads
 wget $visualstudiocode -O visualstudiocode.deb
 sleep 1
 sudo gdebi visualstudiocode.deb
-sudo apt install openjdk-8-jre openjdk-8-jdk -y
-sleep 1
 
 echo "-------------------------------"
 echo "Installing atom"
@@ -150,12 +135,6 @@ sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotne
 sudo apt-key adv --keyserver apt-mo.trafficmanager.net --recv-keys 417A0893
 sudo apt update
 sudo apt install dotnet-dev-1.0.0-preview2-003131 -y
-
-echo "-------------------------------"
-echo "Installing other stuff"
-echo "-------------------------------"
-
-sudo apt install redshift gtk-redshift htop powertop zsh curl guake virtualbox gstreamer-1.0-plugins-ugly -y
 
 echo "-------------------------------"
 echo "Installing papirus icon theme and Adapta"
