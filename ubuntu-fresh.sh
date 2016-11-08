@@ -1,15 +1,15 @@
 #!/bin/bash
 
 #URLS
-ANDROIDSTUDIO_URL=https://dl.google.com/dl/android/studio/ide-zips/2.2.2.0/android-studio-ide-145.3360264-linux.zip
-CLION_URL=https://download.jetbrains.com/cpp/CLion-2016.2.2.tar.gz
-IDEA_URL=https://download.jetbrains.com/idea/ideaIU-2016.2.5.tar.gz
-PIA_URL=https://www.privateinternetaccess.com/installer/install_ubuntu.sh
-VISUALSTUDIO_URL=https://az764295.vo.msecnd.net/stable/02611b40b24c9df2726ad8b33f5ef5f67ac30b44/code_1.7.1-1478180561_amd64.deb
-ATOM_URL=https://atom-installer.github.com/v1.10.2/atom-amd64.deb
-GITKRAKEN_URL=https://release.gitkraken.com/linux/gitkraken-amd64.deb
-INSYNC_URL=http://s.insynchq.com/builds/insync_1.3.11.36106-trusty_amd64.deb
-TEAMSPEAK_URL=http://dl.4players.de/ts/releases/3.0.19.4/TeamSpeak3-Client-linux_amd64-3.0.19.4.run
+ANDROIDSTUDIO_URL="https://dl.google.com/dl/android/studio/ide-zips/2.2.2.0/android-studio-ide-145.3360264-linux.zip"
+CLION_URL="https://download.jetbrains.com/cpp/CLion-2016.2.2.tar.gz"
+IDEA_URL="https://download.jetbrains.com/idea/ideaIU-2016.2.5.tar.gz"
+PIA_URL="https://www.privateinternetaccess.com/installer/install_ubuntu.sh"
+VISUALSTUDIO_URL="https://az764295.vo.msecnd.net/stable/02611b40b24c9df2726ad8b33f5ef5f67ac30b44/code_1.7.1-1478180561_amd64.deb"
+ATOM_URL="https://atom-installer.github.com/v1.10.2/atom-amd64.deb"
+GITKRAKEN_URL="https://release.gitkraken.com/linux/gitkraken-amd64.deb"
+INSYNC_URL="http://s.insynchq.com/builds/insync_1.3.11.36106-trusty_amd64.deb"
+TEAMSPEAK_URL="http://dl.4players.de/ts/releases/3.0.19.4/TeamSpeak3-Client-linux_amd64-3.0.19.4.run"
 
 echo "-------------------------------"
 echo "Welcome to your fresh "
@@ -54,7 +54,7 @@ echo "Installing apps"
 echo "-------------------------------"
 sudo apt install chromium-browser gdebi lib32z1 lib32ncurses5 lib32stdc++6 network-manager network-manager-gnome network-manager-openvpn network-manager-openvpn-gnome -y
 sleep 1
-sudo apt install redshift gtk-redshift htop powertop zsh curl guake virtualbox gstreamer-1.0-plugins-ugly gimp banshee openjdk-8-jre openjdk-8-jdk -y
+sudo apt install redshift gtk-redshift htop powertop zsh curl guake virtualbox gstreamer1.0-plugins-ugly gimp banshee openjdk-8-jre openjdk-8-jdk -y
 sleep 1
 sudo apt install dotnet-dev-1.0.0-preview2-003131 adapta-gtk-theme papirus-icons unity-tweak-tool indicator-sound-switcher -y
 sleep 1
@@ -63,7 +63,7 @@ echo "-------------------------------"
 echo "Installing privateinternetaccess VPN"
 echo "-------------------------------"
 
-wget PIA_URL
+wget $PIA_URL
 sudo sh ./install_ubuntu.sh
 rm install_ubuntu.sh
 
@@ -76,9 +76,9 @@ cd ~/.tools
 
 mkdir ~/.tools/android-studio
 #Download apps
-wget IDEA_URL -O idea.tar.gz
-wget CLION_URL -O clion.tar.gz
-wget ANDROIDSTUDIO_URL -O android-studio.zip
+wget $IDEA_URL -O idea.tar.gz
+wget $CLION_URL -O clion.tar.gz
+wget $ANDROIDSTUDIO_URL -O android-studio.zip
 
 echo "-------------------------------"
 echo "Installing Jetbrains tools"
@@ -112,7 +112,7 @@ echo "-------------------------------"
 echo "Installing atom"
 echo "-------------------------------"
 
-wget ATOM_URL -O atom.deb
+wget $ATOM_URL -O atom.deb
 sudo gdebi atom.deb
 sleep 1
 
@@ -123,7 +123,7 @@ echo "-------------------------------"
 
 
 cd ~/.tools
-wget TEAMSPEAK_URL -O temaspeak.run
+wget $TEAMSPEAK_URL -O temaspeak.run
 chmod +x teamspeak.run
 ./teamspeak.run
 
@@ -136,7 +136,7 @@ echo "-------------------------------"
 echo "Installing Insync"
 echo "-------------------------------"
 
-wget INSYNC_URL -O insync.deb
+wget $INSYNC_URL -O insync.deb
 sudo gdebi insync.deb
 sleep 1
 
