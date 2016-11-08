@@ -129,7 +129,7 @@ chmod +x teamspeak.run
 
 sleep 1
 
-wget GITKRAKEN_URL -O gitkraken.deb
+wget $GITKRAKEN_URL -O gitkraken.deb
 sudo gdebi gitkraken.deb
 
 echo "-------------------------------"
