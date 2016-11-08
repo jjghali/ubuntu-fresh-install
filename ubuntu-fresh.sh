@@ -17,6 +17,17 @@ echo "Welcome to your fresh "
 awk 'FNR==2' /etc/os-release
 echo "-------------------------------"
 
+echo "-------------------------------"
+echo "Adding PPA repos"
+echo "-------------------------------"
+
+sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ xenial main" > /etc/apt/sources.list.d/dotnetdev.list'
+sudo apt-key adv --keyserver apt-mo.trafficmanager.net --recv-keys 417A0893
+
+sudo apt-add-repository ppa:tista/adapta
+sudo apt-add-repository ppa:varlesh-l/papirus-pack
+sudo apt-add-repository ppa:yktooo/ppa
+
 # apt update
 # -------------
 echo ""
@@ -37,13 +48,15 @@ echo "Installing upgrades"
 echo "-------------------------------"
 sudo -k apt full-upgrade -y
 sleep 1
-clear
 
 echo "-------------------------------"
-echo "Installing Chromuim"
+echo "Installing apps"
 echo "-------------------------------"
 sudo apt install chromium-browser gdebi lib32z1 lib32ncurses5 lib32stdc++6 network-manager network-manager-gnome network-manager-openvpn network-manager-openvpn-gnome -y
+sleep 1
 sudo apt install redshift gtk-redshift htop powertop zsh curl guake virtualbox gstreamer-1.0-plugins-ugly gimp banshee openjdk-8-jre openjdk-8-jdk -y
+sleep 1
+sudo apt install dotnet-dev-1.0.0-preview2-003131 adapta-gtk-theme papirus-icons unity-tweak-tool indicator-sound-switcher -y
 sleep 1
 
 echo "-------------------------------"
@@ -126,24 +139,6 @@ echo "-------------------------------"
 wget $insync -O insync.deb
 sudo gdebi insync.deb
 sleep 1
-
-echo "-------------------------------"
-echo "Installing .NET Core"
-echo "-------------------------------"
-
-sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ xenial main" > /etc/apt/sources.list.d/dotnetdev.list'
-sudo apt-key adv --keyserver apt-mo.trafficmanager.net --recv-keys 417A0893
-sudo apt update
-sudo apt install dotnet-dev-1.0.0-preview2-003131 -y
-
-echo "-------------------------------"
-echo "Installing papirus icon theme and Adapta"
-echo "-------------------------------"
-
-sudo apt-add-repository ppa:tista/adapta
-sudo add-apt-repository ppa:varlesh-l/papirus-pack
-sudo apt update
-sudo apt install adapta-gtk-theme papirus-icons unity-tweak-tool -y
 
 mkdir ~/git-repos
 
