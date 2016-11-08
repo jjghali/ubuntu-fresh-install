@@ -1,15 +1,15 @@
 #!/bin/bash
 
 #URLS
-$androidstudio="https://dl.google.com/dl/android/studio/ide-zips/2.2.2.0/android-studio-ide-145.3360264-linux.zip"
-$clion="https://download.jetbrains.com/cpp/CLion-2016.2.2.tar.gz"
-$intellij="https://download.jetbrains.com/idea/ideaIU-2016.2.5.tar.gz"
-$privateinternetaccess="https://www.privateinternetaccess.com/installer/install_ubuntu.sh"
-$visualstudiocode="https://az764295.vo.msecnd.net/stable/02611b40b24c9df2726ad8b33f5ef5f67ac30b44/code_1.7.1-1478180561_amd64.deb"
-$atom="https://atom-installer.github.com/v1.10.2/atom-amd64.deb"
-$gitkraken="https://release.gitkraken.com/linux/gitkraken-amd64.deb"
-$insync="http://s.insynchq.com/builds/insync_1.3.11.36106-trusty_amd64.deb"
-$teamspeak="http://dl.4players.de/ts/releases/3.0.19.4/TeamSpeak3-Client-linux_amd64-3.0.19.4.run"
+$androidstudio=https://dl.google.com/dl/android/studio/ide-zips/2.2.2.0/android-studio-ide-145.3360264-linux.zip
+$clion=https://download.jetbrains.com/cpp/CLion-2016.2.2.tar.gz
+$intellij=https://download.jetbrains.com/idea/ideaIU-2016.2.5.tar.gz
+$privateinternetaccess=https://www.privateinternetaccess.com/installer/install_ubuntu.sh
+$visualstudiocode=https://az764295.vo.msecnd.net/stable/02611b40b24c9df2726ad8b33f5ef5f67ac30b44/code_1.7.1-1478180561_amd64.deb
+$atom=https://atom-installer.github.com/v1.10.2/atom-amd64.deb
+$gitkraken=https://release.gitkraken.com/linux/gitkraken-amd64.deb
+$insync=http://s.insynchq.com/builds/insync_1.3.11.36106-trusty_amd64.deb
+$teamspeak=http://dl.4players.de/ts/releases/3.0.19.4/TeamSpeak3-Client-linux_amd64-3.0.19.4.run
 
 echo "-------------------------------"
 echo "Welcome to your fresh "
