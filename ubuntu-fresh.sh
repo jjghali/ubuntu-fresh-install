@@ -123,7 +123,7 @@ echo "-------------------------------"
 
 
 cd ~/.tools
-wget $TEAMSPEAK_URL -O temaspeak.run
+wget $TEAMSPEAK_URL -O teamspeak.run
 chmod +x teamspeak.run
 ./teamspeak.run
 
