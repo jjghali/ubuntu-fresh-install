@@ -143,12 +143,6 @@ sleep 1
 mkdir ~/git-repos
 
 echo "-------------------------------"
-echo "Installing oh my zsh"
-echo "-------------------------------"
-
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-
-echo "-------------------------------"
 echo "Cleaning up"
 echo "-------------------------------"
 
