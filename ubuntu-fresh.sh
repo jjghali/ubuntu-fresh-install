@@ -25,7 +25,6 @@ sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotne
 sudo apt-key adv --keyserver apt-mo.trafficmanager.net --recv-keys 417A0893
 
 sudo apt-add-repository ppa:tista/adapta
-sudo apt-add-repository ppa:varlesh-l/papirus-pack
 sudo apt-add-repository ppa:yktooo/ppa
 
 # apt update
@@ -56,8 +55,14 @@ sudo apt install chromium-browser gdebi lib32z1 lib32ncurses5 lib32stdc++6 netwo
 sleep 1
 sudo apt install redshift gtk-redshift htop powertop zsh curl guake virtualbox gstreamer1.0-plugins-ugly gimp banshee openjdk-8-jre openjdk-8-jdk -y
 sleep 1
-sudo apt install dotnet-dev-1.0.0-preview2-003131 adapta-gtk-theme papirus-icons unity-tweak-tool indicator-sound-switcher -y
+sudo apt install dotnet-dev-1.0.0-preview2-003131 adapta-gtk-theme unity-tweak-tool indicator-sound-switcher p7zip-full -y
 sleep 1
+
+echo "-------------------------------"
+echo "Installing papirus icon pack"
+echo "-------------------------------"
+
+wget -O - https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme-gtk/master/install-papirus-home.sh | bash
 
 echo "-------------------------------"
 echo "Installing privateinternetaccess VPN"
