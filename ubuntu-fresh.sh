@@ -4,7 +4,7 @@
 ANDROIDSTUDIO_URL="https://dl.google.com/dl/android/studio/ide-zips/2.2.2.0/android-studio-ide-145.3360264-linux.zip"
 CLION_URL="https://download.jetbrains.com/cpp/CLion-2016.2.2.tar.gz"
 IDEA_URL="https://download.jetbrains.com/idea/ideaIU-2016.2.5.tar.gz"
-PIA_URL="https://www.privateinternetaccess.com/installer/install_ubuntu.sh"
+PIA_URL="https://installers.privateinternetaccess.com/download/pia-v65-installer-linux.tar.gz"
 VISUALSTUDIO_URL="https://az764295.vo.msecnd.net/stable/02611b40b24c9df2726ad8b33f5ef5f67ac30b44/code_1.7.1-1478180561_amd64.deb"
 ATOM_URL="https://atom-installer.github.com/v1.10.2/atom-amd64.deb"
 GITKRAKEN_URL="https://release.gitkraken.com/linux/gitkraken-amd64.deb"
@@ -68,9 +68,13 @@ echo "-------------------------------"
 echo "Installing privateinternetaccess VPN"
 echo "-------------------------------"
 
-wget $PIA_URL
-sudo sh ./install_ubuntu.sh
-rm install_ubuntu.sh
+wget $PIA_URL -O pia.tar.gz
+tar xvf pia.tar.gz
+mv pia-v*.sh pia_installer.sh
+chmod +x pia_installer.sh
+sh ./pia_installer.sh
+rm pia.tar.gz
+rm pia_installer.sh
 
 echo "-------------------------------"
 echo "Downloading Jetbrains tools"
