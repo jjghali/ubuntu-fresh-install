@@ -55,7 +55,7 @@ sudo apt install chromium-browser gdebi lib32z1 lib32ncurses5 lib32stdc++6 netwo
 sleep 1
 sudo apt install redshift gtk-redshift htop powertop zsh curl guake virtualbox gstreamer1.0-plugins-ugly gimp banshee openjdk-8-jre openjdk-8-jdk -y
 sleep 1
-sudo apt install dotnet-dev-1.0.0-preview2-003131 adapta-gtk-theme unity-tweak-tool indicator-sound-switcher p7zip-full -y
+sudo apt install dotnet-dev-1.0.0-preview2-003131 adapta-gtk-theme unity-tweak-tool indicator-sound-switcher p7zip-full caffeine -y
 sleep 1
 
 echo "-------------------------------"
